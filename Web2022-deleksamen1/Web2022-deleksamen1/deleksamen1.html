@@ -1,47 +1,53 @@
-<!--Da jeg validerte i w3c fikk jeg 16 feil-->
+<!--Da jeg validerte i w3c fikk jeg 16 feil/error-->
 <!DOCTYPE html> 
 <!--1. Ingen HTML deklarasjon-->
-<html>
+<html lang="en">
+<!--2.Språk attributt-->
     <head>
-    <!--2.head var body-->
+    <!--3.head var body-->
+        <meta charset="utf-8"> 
+        <!--4.legger til meta for norske karakterer og spesialtegn-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css"> 
-        <!--3.maglet gåsetegn-->
+        <!--5.maglet gåsetegn-->
         <title>Web eksamen del 1</title>
     </head>
     <body>
         <nav>
-            <h1>Logo</h1>
+            <h3>Logo</h3>
             <ul>
-            <!--4.Manglet liste elementet ul til li taggen-->
-                <li> <a href="#">Boatswain schooner</a></li>
-                <li> <a href="#">Account lookout</a></li>
-                <li> <a href="#">Sail ho shrouds</a></li>
+            <!--6.Manglet liste elementet ul til li taggen-->
+                <li><a href="#">Boatswain schooner</a></li>
+                <li><a href="#">Account lookout</a></li>
+                <li><a href="#">Sail ho shrouds</a></li>
+            <!--7.Bad practice-->
             </ul>
         </nav>
         <header>
+        <!--8.h1 brukes 1 gang-->    
             <h1>Yar Pirate Ipsum</h1>
             <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl.</p>
             <a class="button">Les mer</a>
         </header>
-        <div id="main">
+        <main>
+        <!--9.Sematiske tagger er bedre å bruke-->
             <article>
-                <h1>Prow scuttle</h1>
+                <h2>Prow scuttle</h2>
                 <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
                 <a href="#">Les mer</a>
             </article>
-            <!--5.manglet avsluttende article tag-->
+            <!--10.manglet avsluttende article tag-->
             <article>
-                <h1>Jack Tar transom</h1>
+                <h2>Jack Tar transom</h2>
                 <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
                 <a href="#">Les mer</a>
             </article>
             <article>
-                <h1>Trysail Sail</h1>
+                <h2>Trysail Sail</h2>
                 <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
                 <a href="#">Les mer</a>
             </article>
-        </div>
+        </main>
         <footer>
             <span>Twitter</span>
             <span>Facebook</span>
