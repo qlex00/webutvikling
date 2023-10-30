@@ -1,42 +1,49 @@
 <!--Da jeg validerte i w3c fikk jeg 21 feil, 16 errors og 5 warnings-->
 <!DOCTYPE html> 
-<!--1. Ingen HTML deklarasjon-->
+<!--Feil nr.1. Det var ingen HTML deklarasjon, Error1:"Start tag seen without seeing a doctype first"-->
 <html lang="en">
-<!--2.Språk attributt-->
+<!--Feil nr.2. Det maglet et språk attributt, 
+Warning1:"Consider adding a 'lang' attribute to the 'html' start tag to declare the language of this document."-->
     <head>
-    <!--3.head var body-->
+    <!--Feil nr.3. Head var i body, flyttet body nedover ut, 
+    2Errors: "Element 'head' is missing a required instance of child element 'title'" og  "Stray start tag 'head'"-->
         <meta charset="utf-8"> 
-        <!--4.legger til meta for norske karakterer og spesialtegn-->
+        <!--Feil nr.4. Legger til meta for norske karakterer og spesialtegn, ikke en mangel i w3c, går sammen med lang attributtet-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css"> 
-        <!--5.maglet gåsetegn-->
+        <!--Feil nr.5. Maglet gåsetegn for å referer til stilarket, w3c oppdager en error som "Illegal character in path segment: '>' is not allowed."
+        men ikke at det er en mangel av et tegn-->
         <title>Web eksamen del 1</title>
     </head>
     <body>
         <nav>
             <h3>Logo</h3>
             <ul>
-            <!--6.Manglet liste elementet ul til li taggen-->
+            <!--Feil nr.6. Manglet liste elementet ul til li taggen, flere warnings kommer opp med 'li' pga. denne feilen, som:
+            "Element 'li' not allowed as child of element 'body' in this context." på alle linjene med inkludert 'li'-->
                 <li><a href="#">Boatswain schooner</a></li>
                 <li><a href="#">Account lookout</a></li>
                 <li><a href="#">Sail ho shrouds</a></li>
-            <!--7.Bad practice-->
+            <!--Feil nr.7. Mellomrom etter avsluttende tagger er 'bad practice' det kan gjøre koden vanskeligere å lese når det er mye linjer kode,
+            w3c oppdager ikke det som en feil-->
             </ul>
         </nav>
-        <header>
-        <!--8.h1 brukes 1 gang-->    
+        <header>    
             <h1>Yar Pirate Ipsum</h1>
+            <!--Feil nr.8. h1 brukes kun 1 gang per html side, det er fordi det er det viktigste tittelen, flere warnings oppdages i w3c hver gang h1 brukes:
+            "Consider using the 'h1' element as a top-level heading only", endret på tittlene i rekkefølge hvor viktig de er-->
             <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl.</p>
             <a class="button">Les mer</a>
         </header>
         <main>
-        <!--9.Sematiske tagger er bedre å bruke, taggen main skal ikke være en id fordi det er en egen tag som man bruker innfor div-->
+        <!--Feil nr.9. Sematiske tagger er bedre å bruke, taggen main skal ikke være en id fordi det er en egen tag som man bruker innfor div,
+        en warning som sier noe om hva div taggen betyr for koden: "End tag 'div' seen, but there were open elements."-->
             <article>
                 <h2>Prow scuttle</h2>
                 <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
                 <a href="#">Les mer</a>
             </article>
-            <!--10.manglet avsluttende article tag-->
+            <!--Feil nr.10. Manglet avsluttende article tag, siste error oppdages: "Unclosed element article"-->
             <article>
                 <h2>Jack Tar transom</h2>
                 <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
