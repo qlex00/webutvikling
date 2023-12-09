@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: calc(1em + 1vw);
+}
+
+body {
+    background-color: gray; 
+    margin: 0;
+}
+/*selv om prototypen hadde hvitt bakgrunnsfarge har jeg bestemt meg for å bruke grå basert på tilbakemeldinger jeg fikk i bruker testing*/
+
+header nav {
+    margin: 1rem 0 0 0; 
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Birthstone Bounce';
+    margin: 0;
+}
+
+h1, a{
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+
+h2 {
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000; 
+    padding: 1rem;
+    display: inline-block; /*lenkene til blokk-elementer*/
+}
+
+
+ul {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+header, main, footer {
+    padding: 1rem;
+}
+
+header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    grid-area: header;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar {
+    display: none;
+}
+
+.responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #242424;
+    margin: 0;
+    padding: 0;
+    top: 40px;
+    width: 100%;
+    list-style: none;
+}
+
+.responsive a {
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+/*.button {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #171717;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 400;
+}*/
+
+article {
+    max-width: 400px; 
+    min-width: 250px;
+    width: 100%; /*responsivt design. */
+    margin: 1rem auto; 
+}
+
+main {
+    grid-area: main;
+}
+
+main section img {
+    width: 100%;
+}
+
+/*#placeholders div, img {
+    height: 200px;
+    width:100%;
+}*/
+
+#punktliste {
+    text-align: left;
+    display: inline-block;
+    list-style: decimal;
+}
+
+#produktlink, a:visited{ /*gjør synlig hvilken linker en kan klikke på, kan endres*/
+    display: block;
+    color:darkblue; 
+}
+
+p{
+    text-align: start;
+}
+
+
+footer {
+    grid-area: footer;
+    padding: 50;
+    margin: 200;
+    text-align: center;
+    word-spacing: 500px;
+}
+
+footer a {
+    padding: 3rem;
+    margin: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    #grid-container {
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+    }
+
+    .grid-container {
+        display: flex;
+        align-items: right;
+    }
+
+
+    .flex-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .flex-section img {
+        width: 50%;
+    }
+
+    .flex-section section {
+        padding: 1rem;
+        width: 40%;
+        align-self: center;
+    }
+
+    header nav ul {
+        float: none; 
+        margin: 0; 
+    }
+
+    header nav ul li {
+        display: inline-block; 
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    header nav {
+        overflow: hidden;
+    }
+
+    main section {
+        overflow: hidden; 
+        max-width: 1260px; 
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    main article {
+        float: left; 
+        margin: 10px;
+    }
+
+    main section ol {
+        float: none;
+        margin: 0;
+    }
+
+    #punktliste {
+        text-align: left;
+        display: inline-block;
+        list-style: decimal;
+    }
+
+    main section article ol li {
+        display: inline-block;
+        
+    }
+
+    footer a {
+    padding: 3rem;
+    margin: 10px;
+}
+}
